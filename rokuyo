@@ -1,0 +1,3 @@
+/*Japanese calendar's six labels, indicating how auspicious each day is*/
+let rokuyo=("先勝","友引","先負","仏滅","大安","赤口")
+let rokuyoeng=("sakigachi","tomobiki","sakimake","butsumetsu","taian","shakko")
