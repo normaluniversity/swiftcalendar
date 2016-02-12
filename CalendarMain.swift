@@ -56,10 +56,10 @@ class CalendarMain{
     let julianDaysOfJan6th2k=2451550.2600930116606;
     let doublePi=2*M_PI
     let lunarMonth=(360/29.530581724560566)
-    let _6w=2299211;
+
     let inverseRadian=M_PI/180;
     var _eu=[1.018214,1.017776,1.015212,1.010587,1.004352,0.996818,0.988663,0.980255,0.972433,0.965387,0.960003,0.956138,0.954598,0.954865,0.957506,0.961814,0.968021,0.975241,0.983452,0.991707,0.999793,1.006813,1.012515,1.016349]
-    var _f1=1/8760
+
     let aThird=1/3
 
     func dayDifferFrom1987(yr:Int) -> Double{
@@ -124,4 +124,17 @@ class CalendarMain{
         }
     }
     
+    func radSin(x:Double) -> Double
+    {
+    return sin(inverseRadian*x);
+    }
+    func radCos(x:Double) -> Double
+    {
+    return cos(inverseRadian*x);
+    }
+    func radTan(x:Double) -> Double
+    {
+    return tan(inverseRadian*x);
+    }
+
 }
