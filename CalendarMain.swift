@@ -137,4 +137,39 @@ class CalendarMain{
     return tan(inverseRadian*x);
     }
 
+    func julianDayToIslamicDate(_jDays:Int)
+    {
+        let _hijriLeapYear=[0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0]
+        let _jDays = 2457443
+        let _cyc = Int(floor( ( Double(_jDays) - 1948086 ) / 10631 ))
+        var _iDate = _jDays - 1948086 - _cyc * 10631 + 1
+        var _iYear = 30 * _cyc
+        var _iy = 0
+        var _daysOfHijriYear = 354
+        while(_iDate > _daysOfHijriYear)
+        {
+            _iDate -= _daysOfHijriYear
+            _iYear++
+            _iy++
+            _daysOfHijriYear = 354+_hijriLeapYear[_iy]
+        }
+        var _iMonth=1;
+        var monday=30;
+        while(_iDate > monday)
+        {
+            _iDate-=monday;
+            _iMonth++;
+            if _iMonth%2==1
+            {
+                monday=30
+            }else if _iMonth==12 && _hijriLeapYear[_iy]==1
+            {
+                monday=30
+            }else
+            {
+                monday=29
+            }
+        }
+    }
+
 }
