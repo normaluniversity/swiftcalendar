@@ -126,15 +126,19 @@ class CalendarMain{
     
     func radSin(x:Double) -> Double
     {
-    return sin(inverseRadian*x);
+    return sin(inverseRadian*x)
     }
     func radCos(x:Double) -> Double
     {
-    return cos(inverseRadian*x);
+    return cos(inverseRadian*x)
     }
     func radTan(x:Double) -> Double
     {
-    return tan(inverseRadian*x);
+    return tan(inverseRadian*x)
+    }
+    func modulusOperation(x:Double) -> Double
+    {
+    return (x % 360 + 360) % 360
     }
 
     func julianDayToIslamicDate(_jDays:Int)
